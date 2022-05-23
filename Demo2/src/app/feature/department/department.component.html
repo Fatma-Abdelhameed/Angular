@@ -1,1 +1,22 @@
-<p>department works!</p>
+<table class="dept-list table w-50 m-3">
+    <thead class="table-success">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Capacity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of depts" class="bg-light">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.capacity}}</td>
+            <td>
+                <button class="btn btn-primary me-2">Show</button>
+                <button class="btn btn-success me-2">Edit</button>
+                <button class="btn btn-danger me-2">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
