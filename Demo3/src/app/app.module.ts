@@ -9,7 +9,7 @@ import {AccordionModule} from 'primeng/accordion';
 import {MenuItem} from 'primeng/api';
 import { ProductsComponent } from './products/products.component'; 
 import {ButtonModule} from 'primeng/button';
-
+import {PanelModule} from 'primeng/panel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,7 @@ import {ButtonModule} from 'primeng/button';
     ProductsComponent
     ],
   imports: [
-    BrowserModule, FormsModule, AccordionModule,ButtonModule
+    BrowserModule, FormsModule, AccordionModule,ButtonModule,PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

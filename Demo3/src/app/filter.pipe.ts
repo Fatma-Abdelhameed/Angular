@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Product } from './_models/product.model';
 
 @Pipe({
   name: 'filter',
@@ -6,10 +7,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: string[], char:string): string[] {
-    let list:string[] = [];
+  transform(value: Product[], char:string): Product[] {
+    let list:Product[] = [];
     value.map(function(item){
-      if(item.toLowerCase().includes(char)){
+      if(item.name.toLowerCase().includes(char)){
         list.push(item)
       }
     })
