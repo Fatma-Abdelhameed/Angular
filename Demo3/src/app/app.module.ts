@@ -5,16 +5,21 @@ import { AppComponent } from './app.component';
 import { StringConvertPipe } from './string-convert.pipe';
 import { FilterPipe } from './filter.pipe';
 import { RatingComponent } from './shared/rating/rating.component';
+import {AccordionModule} from 'primeng/accordion';
+import {MenuItem} from 'primeng/api';
+import { ProductsComponent } from './products/products.component'; 
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     StringConvertPipe,
     FilterPipe,
-    RatingComponent
+    RatingComponent,
+    ProductsComponent
     ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, AccordionModule,ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
