@@ -10,6 +10,7 @@ import {MenuItem} from 'primeng/api';
 import { ProductsComponent } from './products/products.component'; 
 import {ButtonModule} from 'primeng/button';
 import {PanelModule} from 'primeng/panel';
+import {CalendarModule} from 'primeng/calendar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import {PanelModule} from 'primeng/panel';
     ProductsComponent
     ],
   imports: [
-    BrowserModule, FormsModule, AccordionModule,ButtonModule,PanelModule
+    BrowserModule, FormsModule, AccordionModule,ButtonModule,PanelModule, CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
