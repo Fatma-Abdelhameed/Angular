@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StudentComponent } from './student/student.component';
 import { DepartmentComponent } from './department/department.component';
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +10,8 @@ import { DepartmentComponent } from './department/department.component';
     DepartmentComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [StudentComponent, DepartmentComponent]
 })
