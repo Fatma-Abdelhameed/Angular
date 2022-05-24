@@ -6,11 +6,10 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { FooterComponent } from './core/footer/footer.component';
 import { FeatureModule } from './feature/feature.module';
-
 @NgModule({
   declarations: [
     AppComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     CoreModule,
