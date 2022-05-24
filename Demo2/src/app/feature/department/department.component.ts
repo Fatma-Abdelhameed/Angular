@@ -57,7 +57,9 @@ export class DepartmentComponent implements OnInit {
   delete(id:number){
     for(let i = 0; i < this.depts.length; i+=1){
       if(this.depts[i].id == id){
-        this.depts.splice(i, 1)
+        if(confirm(`Are You Sure?! You are about to Delete ${this.depts[i].name} Department`)){
+          this.depts.splice(i, 1)
+        }
       }
     }
   }
