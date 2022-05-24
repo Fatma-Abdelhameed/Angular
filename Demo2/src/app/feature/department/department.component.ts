@@ -8,11 +8,11 @@ import { Department } from 'src/app/_models/department';
 })
 export class DepartmentComponent implements OnInit {
 
-  newDepartment = new Department(0, "", 0);
-  currentDepartment = new Department(0, "", 0);
-  editDepartment = new Department(0, "", 0);
+  newDepartment = new Department(0, "", 0, "");
+  currentDepartment = new Department(0, "", 0, "");
+  editDepartment = new Department(0, "", 0, "");
   add(){
-    this.depts.push(new Department(this.newDepartment.id, this.newDepartment.name, this.newDepartment.capacity))
+    this.depts.push(new Department(this.newDepartment.id, this.newDepartment.name, this.newDepartment.capacity, this.newDepartment.location))
   }
   show(id:number){
     for(let i = 0; i < this.depts.length; i+=1){
@@ -20,6 +20,7 @@ export class DepartmentComponent implements OnInit {
         this.currentDepartment.id = this.depts[i].id;
         this.currentDepartment.name = this.depts[i].name;
         this.currentDepartment.capacity = this.depts[i].capacity;
+        this.currentDepartment.location = this.depts[i].location;
       }
     }
   }
@@ -29,6 +30,7 @@ export class DepartmentComponent implements OnInit {
         this.editDepartment.id = this.depts[i].id;
         this.editDepartment.name = this.depts[i].name;
         this.editDepartment.capacity = this.depts[i].capacity;
+        this.editDepartment.location = this.depts[i].location;
       }
     }
   }
@@ -39,11 +41,13 @@ export class DepartmentComponent implements OnInit {
         this.depts[i].id = this.editDepartment.id;
         this.depts[i].name = this.editDepartment.name;
         this.depts[i].capacity = this.editDepartment.capacity;
+        this.depts[i].location = this.editDepartment.location;
       }
     }
     this.editDepartment.id = 0;
     this.editDepartment.name = '';
     this.editDepartment.capacity = 0;
+    this.editDepartment.location = '';
   }
   delete(id:number){
     for(let i = 0; i < this.depts.length; i+=1){
@@ -53,8 +57,8 @@ export class DepartmentComponent implements OnInit {
     }
   }
   depts:Department[]=[
-    new Department(1, "SE", 70),
-    new Department(2, "CS", 40),
+    new Department(1, "SE", 70, 'Alex'),
+    new Department(2, "CS", 40, 'Cairo'),
   ]
   constructor() { }
 
