@@ -1,0 +1,25 @@
+<div class="card w-50 mt-3 mb-3 m-auto">
+    <div class="card-header bg-primary text-white">
+      Add New Department
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label>Department ID</label>
+            <input class="form-control" type="text" [(ngModel)]="newDept._id">
+        </div>
+        <div class="mb-3">
+            <label>Department Name</label>
+            <input class="form-control" type="text" [(ngModel)]="newDept.name">
+        </div>
+        <div class="mb-3">
+            <label>Department Location</label>
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="newDept.location">
+                <option selected>Choose Location</option>
+                <option value="Smart">Smart</option>
+                <option value="Alex">Alex</option>
+                <option value="Mansoura">Mansoura</option>
+              </select>
+        </div>
+        <button class="btn btn-primary" (click) = "addNew()">Add</button>      
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dept of depts">
+            <td>{{dept._id}}</td>
+            <td>{{dept.name}}</td>
+            <td>{{dept.location}}</td>
+            <td>
+                <app-delete-department [deptID] = "dept._id"></app-delete-department>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
